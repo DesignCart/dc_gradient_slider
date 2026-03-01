@@ -1,0 +1,169 @@
+/* DC Gradient Slider */
+.dc-gslider-wrapper {
+	position: relative;
+	width: 100%;
+	background: var(--dc-module-bg, #1a1a1a);
+	overflow: hidden;
+}
+
+.dc-gslider-inner {
+	position: relative;
+	width: 100%;
+}
+
+.dc-gslider-slider {
+	position: relative;
+	z-index: 1;
+}
+
+.dc-gslider-slider .slick-list,
+.dc-gslider-slider .slick-track {
+	height: 100%;
+}
+
+.dc-gslider-slider .slick-slide {
+	height: auto;
+}
+
+.dc-gslider-slide {
+	position: relative;
+	min-height: var(--dc-slider-height, 420px);
+	height: var(--dc-slider-height, 420px);
+	display: flex !important;
+	align-items: center;
+	background: var(--dc-module-bg, #1a1a1a);
+}
+
+.dc-gslider-slide-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+
+.dc-gslider-gradient-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	pointer-events: none;
+}
+
+/* Pierwszy slajd z gradientem: ukrywamy tło, bo canvas pokazuje gradient+obraz */
+.dc-gslider-slide--gradient .dc-gslider-slide-bg {
+	opacity: 0;
+	pointer-events: none;
+}
+
+.dc-gslider-slide-content {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	min-height: var(--dc-slider-height, 420px);
+	height: 100%;
+	padding: 3rem 2rem 4rem;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+
+.dc-gslider-content-block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 600px;
+	gap: 0.75rem;
+}
+
+.dc-gslider-wrapper.dc-gslider-pos-center .dc-gslider-slide-content {
+	justify-content: center;
+}
+
+.dc-gslider-wrapper.dc-gslider-pos-center .dc-gslider-content-block {
+	align-items: center;
+	text-align: center;
+}
+
+.dc-gslider-wrapper.dc-gslider-pos-right .dc-gslider-slide-content {
+	justify-content: flex-end;
+}
+
+.dc-gslider-wrapper.dc-gslider-pos-right .dc-gslider-content-block {
+	align-items: flex-end;
+	text-align: right;
+}
+
+.dc-gslider-heading {
+	font-size: var(--dc-heading-size, 48px);
+	color: var(--dc-heading-color, #fff);
+	margin: 0;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+.dc-gslider-heading.dc-gslider-heading-p {
+	font-size: var(--dc-heading-size, 48px);
+	font-weight: 700;
+}
+
+.dc-gslider-description {
+	font-size: var(--dc-desc-size, 18px);
+	color: var(--dc-desc-color, #fff);
+	line-height: 1.5;
+	margin: 0;
+}
+
+.dc-gslider-btn {
+	display: inline-block;
+	padding: 0.75rem 1.5rem;
+	background: var(--dc-btn-bg, #27C07C);
+	color: var(--dc-btn-color, #fff);
+	font-size: var(--dc-btn-font-size, 16px);
+	text-decoration: none;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.2s, color 0.2s;
+	margin-top: 0.25rem;
+}
+
+.dc-gslider-btn:hover {
+	background: var(--dc-btn-bg-hover, #22a86a);
+	color: var(--dc-btn-color-hover, #fff);
+}
+
+.dc-gslider-arc {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 160px;
+	z-index: 3;
+	pointer-events: none;
+}
+
+.dc-gslider-arc-svg {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.dc-gslider-slider .slick-dots {
+	bottom: 1rem;
+	z-index: 4;
+}
+
+.dc-gslider-slider .slick-prev,
+.dc-gslider-slider .slick-next {
+	z-index: 4;
+}
