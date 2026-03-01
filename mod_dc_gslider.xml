@@ -11,11 +11,9 @@
 		<filename module="mod_dc_gslider">mod_dc_gslider.php</filename>
 		<folder>tmpl</folder>
 		<folder>language</folder>
+		<folder>media</folder>
 	</files>
-	<media destination="mod_dc_gslider" folder="media">
-		<filename>css/style.css</filename>
-		<filename>js/slider.js</filename>
-	</media>
+
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.mod_dc_gslider.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.mod_dc_gslider.sys.ini</language>
