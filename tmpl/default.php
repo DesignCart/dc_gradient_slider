@@ -72,13 +72,18 @@ if (empty($slides)) {
 }
 
 $gradientImageUrl = '';
-if ($gradientEn && !empty($gradientColors)) {
-	$firstSlide = is_object($slides[0]) ? $slides[0] : (object) $slides[0];
-	$firstImg   = $firstSlide->image ?? '';
-	if ($firstImg) {
-		$clean = HTMLHelper::_('cleanImageURL', $firstImg);
-		$gradientImageUrl = $clean ? (Uri::root() . ltrim($clean->url, '/')) : '';
-	}
+if ($gradientEn && !empty($gradientColors) && !empty($slides)) {
+
+    $firstSlideRaw = reset($slides);
+    if ($firstSlideRaw) {
+        $firstSlide = is_object($firstSlideRaw) ? $firstSlideRaw : (object) $firstSlideRaw;
+        $firstImg   = $firstSlide->image ?? '';
+
+        if ($firstImg) {
+            $clean = HTMLHelper::_('cleanImageURL', $firstImg);
+            $gradientImageUrl = $clean ? (Uri::root() . ltrim($clean->url, '/')) : '';
+        }
+    }
 }
 
 $configJson = htmlspecialchars(json_encode([
