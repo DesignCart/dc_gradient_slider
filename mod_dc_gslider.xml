@@ -14,6 +14,10 @@
 		<folder>media</folder>
 	</files>
 
+	<updateservers>
+		<server type="extension" name="UPDATE_SERVER">https://www.designcart.pl/download/updates/update_mod_gslider.xml</server>
+	</updateservers>
+
 	<languages>
 		<language tag="en-GB">language/en-GB/en-GB.mod_dc_gslider.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.mod_dc_gslider.sys.ini</language>
