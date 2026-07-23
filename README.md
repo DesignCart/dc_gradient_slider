@@ -159,3 +159,4 @@
 <p>Pull requests are welcome.<br /> If you find a bug or want to improve the module, feel free to open an issue or submit a PR.</p>
 
 <p>Project Home Page: <a href="https://www.designcart.pl/laboratorium/299-dc-gradient-slider-najbardziej-wyjatkowy-slider-dla-joomla-5-6.html">DC Gradient Slider - najbardziej wyjątkowy slider dla Joomla 5/6</a></p>
+<p>👨‍💻 author: <a href="https://www.designcart.pl/pawel-nosko.html">Paweł Nosko</a></p>
